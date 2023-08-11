@@ -3,7 +3,6 @@ import Dog from "./Dog";
 
 const Dogs = () => {
   const [dogBreed, setdogBreed] = useState("");
-  const [breedID, setBreedID] = useState("");
   const [dogData, setDogData] = useState([]);
 
   const handleSearch = async () => {
