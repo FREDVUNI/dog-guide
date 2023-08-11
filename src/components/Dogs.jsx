@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Dog from "./Dog";
 
 const Dogs = () => {
@@ -12,7 +12,6 @@ const Dogs = () => {
       );
       const data = await response.json();
       setDogData(data);
-      console.log(data);
     } catch (error) {
       console.error("Error fetching dog data:", error);
     }
@@ -28,7 +27,6 @@ const Dogs = () => {
           type="text"
           id="dog-name"
           placeholder="Enter dog name here..."
-          value={dogBreed}
           onChange={(e) => setdogBreed(e.target.value)}
         />
         <button id="search-btn" onClick={handleSearch}>
