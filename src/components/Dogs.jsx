@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect, useState } from "react";
 import Dog from "./Dog";
 
 const Dogs = () => {
@@ -20,6 +21,7 @@ const Dogs = () => {
   useEffect(() => {
     handleSearch();
   }, []);
+
   return (
     <div className="container">
       <div className="search-container">
