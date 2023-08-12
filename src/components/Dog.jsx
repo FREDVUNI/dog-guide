@@ -1,6 +1,6 @@
 import React from "react";
 
-const Dog = (dog) => {
+const Dog = ({ dog }) => {
   return (
     <div id="result">
       <div className="info">
