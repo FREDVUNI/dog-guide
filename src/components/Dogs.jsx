@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Dog from "./Dog";
 
 const Dogs = () => {
-  const [dogBreed, setdogBreed] = useState("");
+  const [dogBreed, setDogBreed] = useState("");
   const [dogData, setDogData] = useState([]);
 
   const handleSearch = async () => {
@@ -27,15 +27,20 @@ const Dogs = () => {
           type="text"
           id="dog-name"
           placeholder="Enter dog name here..."
-          onChange={(e) => setdogBreed(e.target.value)}
+          onChange={(e) => setDogBreed(e.target.value)}  //setdogBreed was not camelCase (not a bug)
         />
         <button id="search-btn" onClick={handleSearch}>
           Search
         </button>
       </div>
-      {dogData.map((dog) => (
-        <Dog key={dog.id} dog={dog} />
-      ))}
+      {dogData.length > 0 ? ( 
+        //The dogData state is initialized as an empty array, 
+        //when the component first renders, the dogData array might still be empty, 
+        //and this could cause an error during the rendering.
+        dogData.map((dog) => <Dog key={dog.id} dog={dog} />)
+      ) : (
+        <p>No dogs found.</p>
+      )}
     </div>
   );
 };
