@@ -1,5 +1,5 @@
 import React from "react";
-
+// add dog object
 const Dog = ({ dog }) => {
   return (
     <div id="result">
