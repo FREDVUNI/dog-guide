@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 const Dog = (dog) => {
   return (
@@ -6,9 +6,9 @@ const Dog = (dog) => {
       <div className="info">
         {dog.reference_image_id ? (
           <img
-            src={`https://cdn2.thedogapi.com/images/${dog?.reference_image_id}_1280.jpg`}
-            className="poster"
-            alt={dog?.name}
+          src={`https://cdn2.thedogapi.com/images/${dog?.reference_image_id}_1280.jpg`}
+          className="poster"
+          alt={dog?.name}
           />
         ) : (
           <img
@@ -19,8 +19,8 @@ const Dog = (dog) => {
         )}
         <div>
           <h2>{dog?.name}</h2>
-          <p className="details">Temperament: {dog?.temperament}</p>
-          <p className="details">Origin: {dog?.origin}</p>
+          <p class="details">Temperament: {dog?.temperament}</p>
+          <p class="details">Origin: {dog?.origin}</p>
           <div className="breed">
             <div>Weight (imperial): {dog?.weight.imperial}</div>
             <div>Height (imperial): {dog?.height.imperial}</div>
