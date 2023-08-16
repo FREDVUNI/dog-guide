@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState, useEffect} from "react";
 import Dog from "./Dog";
 
 const Dogs = () => {
@@ -33,7 +33,7 @@ const Dogs = () => {
           Search
         </button>
       </div>
-      {dogData.map((dog) => (
+      {dogData?.map((dog) => (
         <Dog key={dog.id} dog={dog} />
       ))}
     </div>

@@ -22,8 +22,8 @@ const Dog = (dog) => {
           <p className="details">Temperament: {dog?.temperament}</p>
           <p className="details">Origin: {dog?.origin}</p>
           <div className="breed">
-            <div>Weight (imperial): {dog?.weight.imperial}</div>
-            <div>Height (imperial): {dog?.height.imperial}</div>
+            <div>Weight (imperial): {dog?.weight?.imperial}</div>
+            <div>Height (imperial): {dog?.height?.imperial}</div>
           </div>
         </div>
       </div>
