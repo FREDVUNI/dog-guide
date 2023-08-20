@@ -1,9 +1,6 @@
 import Dog from "./Dog";
 import React, { useState, useEffect } from "react";
 
-import Dog from "./Dog";
-import { useEffect,useState } from "react";
-
 const Dogs = () => {
   const [dogBreed, setdogBreed] = useState("");
   const [dogData, setDogData] = useState([]);
