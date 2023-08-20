@@ -1,7 +1,6 @@
-import React from "react";
-import React,{useState, useEffect } from "react";
+import React, {useState, useEffect} from 'react';
 
-const Dog = (dog) => {
+const Dog = ({dog}) => {
   return (
     <div id="result">
       <div className="info">
@@ -20,8 +19,8 @@ const Dog = (dog) => {
         )}
         <div>
           <h2>{dog?.name}</h2>
-          <p className="details">Temperament: {dog?.temperament}</p>
-          <p className="details">Origin: {dog?.origin}</p>
+          <p class="details">Temperament: {dog?.temperament}</p>
+          <p class="details">Origin: {dog?.origin}</p>
           <div className="breed">
             <div>Weight (imperial): {dog?.weight.imperial}</div>
             <div>Height (imperial): {dog?.height.imperial}</div>
