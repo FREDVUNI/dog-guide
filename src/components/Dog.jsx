@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react';
-
 const Dog = ({dog}) => {
   return (
     <div id="result">
