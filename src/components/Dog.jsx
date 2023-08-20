@@ -5,10 +5,8 @@ const Dog = ({dog}) => {
     <div id="result">
       <div className="info">
         {dog.reference_image_id ?
-          <img
-            src={`https://cdn2.thedogapi.com/images/ ${dog?.reference_image_id}_1280.jpg`}
-            className="poster"
-            alt={dog?.name}
+          <img  src={`https://cdn2.thedogapi.com/images/${dog?.reference_image_id}_1280.jpg`}
+          className="poster"
           />
          : (
           <img

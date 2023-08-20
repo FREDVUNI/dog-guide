@@ -19,7 +19,8 @@ const Dogs = () => {
 
   useEffect(() => {
     handleSearch();
-  },[dogBreed]);
+  }, [dogBreed]);
+}
   return (
     <div className="container">
       <div className="search-container">
@@ -33,9 +34,9 @@ const Dogs = () => {
           Search
         </button>
       </div>
-      {dogData.map((dog) => (
+ {dogData.map((dog) => (
         <Dog key={dog.id} {...dog} />
-      ))}
+        ))}
     </div>
   );
 };
