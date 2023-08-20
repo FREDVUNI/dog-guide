@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
 import Dog from "./Dog";
+import React, { useState, useEffect } from "react";
 
 const Dogs = () => {
   const [dogBreed, setDogBreed] = useState("");
@@ -19,7 +19,8 @@ const Dogs = () => {
 
   useEffect(() => {
     handleSearch();
-  }, []);
+  }, [dogBreed]);
+}
   return (
     <div className="container">
       <div className="search-container">
@@ -33,14 +34,9 @@ const Dogs = () => {
           Search
         </button>
       </div>
-      {dogData.length > 0 ? ( 
-        //The dogData state is initialized as an empty array, 
-        //when the component first renders, the dogData array might still be empty, 
-        //and this could cause an error during the rendering.
-        dogData.map((dog) => <Dog key={dog.id} dog={dog} />)
-      ) : (
-        <p>No dogs found.</p>
-      )}
+ {dogData.map((dog) => (
+        <Dog key={dog.id} {...dog} />
+        ))}
     </div>
   );
 };
