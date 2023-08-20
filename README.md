@@ -31,6 +31,13 @@ This is a simple web application that allows users to search for dog breeds and 
 
 ## How to Use
 
+1. Fork and Clone this repository to your local machine.
+2. Navigate to the project directory.
+3. Run `yarn install` to install the project dependencies.
+4. Run `yarn run dev` to start the development server.
+5. Open your browser and go to `http://localhost:5173/` to access the app.
+6. Enter a dog breed name in the search input field and click the "Search" button to see the information.
+
 ## Note
 
 This app fetches data from a public dog breed API. Since the data is obtained from an external source, it might not be up-to-date or accurate for every breed. The app is intended for educational purposes and as a demonstration of using APIs with React.

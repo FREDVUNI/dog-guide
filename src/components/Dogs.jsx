@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import Dog from "./Dog";
 
 const Dogs = () => {
-  const [dogBreed, setdogBreed] = useState("");
+  const [dogBreed, setDogBreed] = useState("");
   const [dogData, setDogData] = useState([]);
 
   const handleSearch = async () => {
@@ -19,7 +19,8 @@ const Dogs = () => {
 
   useEffect(() => {
     handleSearch();
-  }, []);
+  }, [dogBreed]);
+}
   return (
     <div className="container">
       <div className="search-container">
@@ -27,15 +28,15 @@ const Dogs = () => {
           type="text"
           id="dog-name"
           placeholder="Enter dog name here..."
-          onChange={(e) => setdogBreed(e.target.value)}
+          onChange={(e) => setDogBreed(e.target.value)}  //setdogBreed was not camelCase (not a bug)
         />
         <button id="search-btn" onClick={handleSearch}>
           Search
         </button>
       </div>
-      {dogData.map((dog) => (
-        <Dog key={dog.id} dog={dog} />
-      ))}
+ {dogData.map((dog) => (
+        <Dog key={dog.id} {...dog} />
+        ))}
     </div>
   );
 };
