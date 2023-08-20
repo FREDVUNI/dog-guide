@@ -2,7 +2,7 @@ import Dog from "./Dog";
 import React, { useState, useEffect } from "react";
 
 const Dogs = () => {
-  const [dogBreed, setdogBreed] = useState("");
+  const [dogBreed, setDogBreed] = useState("");
   const [dogData, setDogData] = useState([]);
 
   const handleSearch = async () => {
@@ -19,7 +19,7 @@ const Dogs = () => {
 
   useEffect(() => {
     handleSearch();
-  }, []);
+  },[dogBreed]);
   return (
     <div className="container">
       <div className="search-container">
