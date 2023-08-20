@@ -1,8 +1,8 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import Dog from "./Dog";
 
 const Dogs = () => {
-  const [dogBreed, setDogBreed] = useState("");
+  const [dogBreed, setdogBreed] = useState("");
   const [dogData, setDogData] = useState([]);
 
   const handleSearch = async () => {
@@ -12,6 +12,7 @@ const Dogs = () => {
       );
       const data = await response.json();
       setDogData(data);
+      console.log(data);
     } catch (error) {
       console.error("Error fetching dog data:", error);
     }
@@ -19,8 +20,7 @@ const Dogs = () => {
 
   useEffect(() => {
     handleSearch();
-  }, [dogBreed]);
-}
+  }, []);
   return (
     <div className="container">
       <div className="search-container">
@@ -28,15 +28,16 @@ const Dogs = () => {
           type="text"
           id="dog-name"
           placeholder="Enter dog name here..."
-          onChange={(e) => setDogBreed(e.target.value)}  //setdogBreed was not camelCase (not a bug)
+          value={dogBreed}
+          onChange={(e) => setdogBreed(e.target.value)}
         />
         <button id="search-btn" onClick={handleSearch}>
           Search
         </button>
       </div>
- {dogData.map((dog) => (
-        <Dog key={dog.id} {...dog} />
-        ))}
+      {dogData.map((dog) => (
+        <Dog key={dog.id} dog={dog} />
+      ))}
     </div>
   );
 };
