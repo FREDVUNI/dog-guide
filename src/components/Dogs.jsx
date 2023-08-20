@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
 import Dog from "./Dog";
-
+import React, { useState, useEffect } from "react";
 
 const Dogs = () => {
   const [dogBreed, setDogBreed] = useState("");
@@ -21,7 +20,7 @@ const Dogs = () => {
   useEffect(() => {
     handleSearch();
   }, [dogBreed]);
-  
+}
   return (
     <div className="container">
       <div className="search-container">
@@ -35,7 +34,7 @@ const Dogs = () => {
           Search
         </button>
       </div>
-        {dogData.map((dog) => (
+ {dogData.map((dog) => (
         <Dog key={dog.id} {...dog} />
         ))}
     </div>
