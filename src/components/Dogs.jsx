@@ -28,7 +28,7 @@ const Dogs = () => {
           type="text"
           id="dog-name"
           placeholder="Enter dog name here..."
-          onChange={(e) => setdogBreed(e.target.value)}
+          onChange={(e) => setDogBreed(e.target.value)}  //setdogBreed was not camelCase (not a bug)
         />
         <button id="search-btn" onClick={handleSearch}>
           Search
