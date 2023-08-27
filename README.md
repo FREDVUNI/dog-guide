@@ -44,6 +44,11 @@ This app fetches data from a public dog breed API. Since the data is obtained fr
 
 For any issues or improvements, feel free to open an issue or pull request.
 
+## Screenshot
+
+![image](https://github.com/FREDVUNI/dog-guide/assets/41730664/69988032-67ba-4884-b827-9fa6b350607e)
+
+
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
