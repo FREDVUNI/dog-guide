@@ -1,10 +1,41 @@
 # Dogs.jsx
 
-```line 2 -import React, { useState, useEffect } from "react";                                                 line 6 -const [dogBreed, setDogBreed] = useState("");
-line38 -  <Dog key={dog.id} {...dog} />
-line 23 -  handleSearch(); },[dogBreed])```
+```import React, { useState, useEffect } from "react";
 
-### Dog.jsx
+const Dogs = () => {
+  const [dogBreed, setDogBreed] = useState("");
 
-```line 2 -import React,{useState, useEffect } from "react";
-line 17 - alt={dog?.name}```
+  useEffect(() => {
+    handleSearch();
+  }, [dogBreed]);
+
+  return (
+    <div>
+      <Dog key={dog.id} {...dog} />
+    </div>
+  );
+};
+
+export default Dogs;
+```
+
+## Dog.jsx
+
+```import React, { useState, useEffect } from "react";
+
+const Dog = () => {
+  const [dogBreed, setDogBreed] = useState("");
+
+  useEffect(() => {
+    handleSearch();
+  }, [dogBreed]);
+
+  return (
+    <div>
+      <Dog key={dog.id} {...dog} />
+    </div>
+  );
+};
+
+export default Dog;
+```
