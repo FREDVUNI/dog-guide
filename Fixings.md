@@ -1,4 +1,6 @@
-# Dogs.jsx
+# Fixes
+
+## Dogs.jsx
 
 ```import React, { useState, useEffect } from "react";
 
